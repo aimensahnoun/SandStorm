@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3343436758930334282}
   - component: {fileID: 6603757458747929458}
   - component: {fileID: 5972076839311114431}
+  - component: {fileID: 2187421766768724089}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -186,3 +187,15 @@ MonoBehaviour:
   ChatBar: {fileID: 0}
   ChatFeed: {fileID: 1470889619230079132, guid: 44d29a00a4bd22c459055af896ab15e8, type: 3}
   InputField: {fileID: 0}
+--- !u!114 &2187421766768724089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95468934536132540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2b5ce4dfcd546cea616b08cf20d850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
