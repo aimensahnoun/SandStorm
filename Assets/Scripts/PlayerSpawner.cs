@@ -3,20 +3,47 @@ using UnityEngine.UI;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
 
-public class InstantiationExample : MonoBehaviourPunCallbacks
+public class PlayerSpawner : MonoBehaviourPunCallbacks
 {
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public PhotonView view;
     GameObject player;
+    public static PlayerSpawner Instance;
+
     // This script will simply instantiate the Prefab when the game starts.
 
-  
-    void Start()
+    private void Awake()
     {
-        OnSceneLoaded();
+        PhotonNetwork.AutomaticallySyncScene = true;
+        if (Instance)
+        {
+            Destroy(Instance);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(Instance);
     }
 
-    private void OnSceneLoaded() {
+
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         Vector3 spawnPosition = new Vector3(Random.Range(-4f, 4), 10, Random.Range(-4f, 4));
         if (PhotonNetwork.InRoom)
         {

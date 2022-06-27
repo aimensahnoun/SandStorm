@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        PhotonNetwork.AutomaticallySyncScene = false;
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
 
