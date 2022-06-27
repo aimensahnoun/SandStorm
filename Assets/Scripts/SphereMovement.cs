@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Photon.Pun;
 
 public class SphereMovement : MonoBehaviour
@@ -22,7 +21,6 @@ public class SphereMovement : MonoBehaviour
 
     public PhotonView playerPhotonView;
     
-    public Text usernameText;
 
     private void Start()
     {
@@ -30,18 +28,7 @@ public class SphereMovement : MonoBehaviour
         playerPhotonView = GetComponent<PhotonView>();
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         managerScript = gameManager.GetComponent<PlayerManager>();
-        
 
-        playerPhotonView.Owner.NickName = "Player_" + UnityEngine.Random.Range(0, 100).ToString();
-
-        if (playerPhotonView.IsMine)
-        {
-            usernameText.text = playerPhotonView.Owner.NickName;
-            usernameText.color = Color.green;
-        } else {
-            usernameText.text = playerPhotonView.Owner.NickName;
-            usernameText.color = Color.red;
-        }
     }
 
     private void Update()

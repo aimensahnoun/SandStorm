@@ -2091,7 +2091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   view: {fileID: 1593163869}
-  usernameText: {fileID: 0}
 --- !u!4 &1351380424
 Transform:
   m_ObjectHideFlags: 0
