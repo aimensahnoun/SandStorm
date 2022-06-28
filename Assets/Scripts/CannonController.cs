@@ -7,7 +7,7 @@ public class CannonController : MonoBehaviour
 
     [SerializeField] private Transform cannonHead;
     [SerializeField] private Transform cannonTip;
-    [SerializeField] private float shootingCooldown = 3f;
+    [SerializeField] private float shootingCooldown = 1.5f;
     [SerializeField] private float laserPower = 6f;
     private GameObject gameManager;
     private PlayerManager managerScript;
@@ -44,7 +44,6 @@ public class CannonController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hello");
         if (other.CompareTag("Player"))
         {
             player = other.gameObject;
@@ -72,8 +71,6 @@ public class CannonController : MonoBehaviour
         if (!managerScript.GetStartGame() && isGameStarted) return;
         if (isPlayerInRange)
         {
-            Debug.Log(cannonHead);
-            Debug.Log(player);
             cannonHead.transform.LookAt(player.transform);
             cannonlaser.SetPosition(0, cannonTip.transform.position);
             cannonlaser.SetPosition(1, player.transform.position);
