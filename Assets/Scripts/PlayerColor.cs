@@ -11,7 +11,7 @@ public class PlayerColor : MonoBehaviour
     
 
 
-  
+    
   
     [PunRPC]
     void changeColor()
