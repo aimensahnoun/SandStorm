@@ -17,12 +17,7 @@ public class PlayerColor : MonoBehaviour
     void changeColor()
     {
         if (isAssignedColor) return;      
-        Color playerColor = new Color(
-        Random.Range(0f, 1f),
-        Random.Range(0f, 1f),
-        Random.Range(0f, 1f));
-
-        GetComponent<Renderer>().material.color = playerColor;
+        GetComponent<Renderer>().material.color = Color.green;
         assignColor();
     }
 
