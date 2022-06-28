@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonHead: {fileID: 2072182886142045115}
   cannonTip: {fileID: 2072182886200704313}
-  shootingCooldown: 3
+  shootingCooldown: 1.5
   laserPower: 6
 --- !u!114 &5950302005391288063
 MonoBehaviour:
