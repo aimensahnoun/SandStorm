@@ -46,11 +46,11 @@ public class SphereMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (playerPhotonView.IsMine && isGameStarted)
-        //{
-        //    Move();
-        //}
-        Move();
+        if (playerPhotonView.IsMine && isGameStarted)
+        {
+            Move();
+        }
+        
     }
 
     private void OnCollisionEnter(Collision c)
