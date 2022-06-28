@@ -11,11 +11,11 @@ public class PlayerManager : MonoBehaviour
 {
     public GameObject[] playerArray;
 
-    public float deathTriggerHeight = -100f;
+    public float deathTriggerHeight = -10f;
 
     public bool startGame = false;
 
-    public int minNumberOfPlayers = 3;
+    public int minNumberOfPlayers = 2;
 
     private bool hasTheGameStarted = false;
 
@@ -51,10 +51,22 @@ public class PlayerManager : MonoBehaviour
         {
             managerView.RPC("SetGameStart", RpcTarget.All);
         }
+
+        if (startGame && playerArray.Length == 1)
+        {
+            if (playerArray[0].GetComponent<PhotonView>().IsMine)
+            {
+                PhotonNetwork.AutomaticallySyncScene = false;
+                SceneManager.LoadScene("YouWinScene");
+            }
+            return;
+        }
     }
 
     private void Update()
     {
+        
+
         PlayerDeathCheck();
     }
 
@@ -72,6 +84,7 @@ public class PlayerManager : MonoBehaviour
             {
                 if (player.GetComponent<PhotonView>().IsMine)
                 {
+                    PhotonNetwork.AutomaticallySyncScene = false;
                     SceneManager.LoadScene("YouLoseScene");
                 }
                 

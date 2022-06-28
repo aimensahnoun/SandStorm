@@ -2747,9 +2747,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerArray: []
-  deathTriggerHeight: -100
+  deathTriggerHeight: -10
   startGame: 0
-  minNumberOfPlayers: 3
+  minNumberOfPlayers: 2
 --- !u!4 &1593163868
 Transform:
   m_ObjectHideFlags: 0

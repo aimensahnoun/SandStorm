@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
-public class ExitScript : MonoBehaviour
+public class ExitScript :MonoBehaviourPunCallbacks
 {
 
     // Use this for initialization
@@ -21,6 +22,7 @@ public class ExitScript : MonoBehaviour
 
     public void exit()
     {
+        PhotonNetwork.Disconnect();
         SceneManager.LoadScene(0);
     }
 }
