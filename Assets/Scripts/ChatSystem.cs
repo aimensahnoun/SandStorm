@@ -26,7 +26,7 @@ public class ChatSystem : MonoBehaviourPunCallbacks
     {
         if(PhotonView.IsMine){
             if(InputField.isFocused){
-                if(InputField.text != "" && InputField.text.Length > 0 && Input.GetKeyDown(KeyCode.LeftAlt)){
+                if(InputField.text != "" && InputField.text.Length > 0 && Input.GetKeyDown(KeyCode.Return)){
                     PhotonView.RPC("SendMessage", RpcTarget.All, InputField.text);
                     InputField.text = "";
                 }
