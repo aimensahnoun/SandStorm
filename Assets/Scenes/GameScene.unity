@@ -3795,26 +3795,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannon (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2647910662043540398, guid: 07a410a9cc76149f8bc6c4be382b5297, type: 3}
-      propertyPath: sceneViewId
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950302005391288063, guid: 07a410a9cc76149f8bc6c4be382b5297, type: 3}
-      propertyPath: sceneViewId
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6338500705355274599, guid: 07a410a9cc76149f8bc6c4be382b5297, type: 3}
-      propertyPath: sceneViewId
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058493115808593456, guid: 07a410a9cc76149f8bc6c4be382b5297, type: 3}
-      propertyPath: sceneViewId
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510503583322932429, guid: 07a410a9cc76149f8bc6c4be382b5297, type: 3}
-      propertyPath: sceneViewId
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07a410a9cc76149f8bc6c4be382b5297, type: 3}
 --- !u!1 &2002062480
