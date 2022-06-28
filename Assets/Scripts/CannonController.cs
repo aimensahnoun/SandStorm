@@ -68,7 +68,7 @@ public class CannonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!managerScript.GetStartGame() && !isGameStarted) return;
+        if (!managerScript.GetStartGame()) return;
         if (isPlayerInRange)
         {
             cannonHead.transform.LookAt(player.transform);
